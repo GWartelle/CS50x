@@ -1,0 +1,167 @@
+/*
+const unsigned int N = LENGTH * LENGTH;
+const unsigned int N = 26 * LENGTH;
+const unsigned int N = 26 * 26;
+const unsigned int N = LENGTH;
+const unsigned int N = 26;
+*/
+
+/*
+Running time on lalaland (with N = 26*26): 0.09sec
+unsigned int x = 0;
+    unsigned int n = strlen(word);
+    for (int i = 0; i < n; i++)
+    {
+        if (isalpha(word[i]))
+        {
+            x += toupper(word[i]) - 'A';
+        }
+    }
+    return (x * n) % N;
+
+Running time on lalaland (with N = LENGTH*LENGTH): 0.06sec
+unsigned int x = 0;
+    unsigned int n = strlen(word);
+    for (int i = 0; i < n; i++)
+    {
+        if (isalpha(word[i]))
+        {
+            x += toupper(word[i]) - 'A';
+        }
+    }
+    return (x * n) % N;
+
+Running time on lalaland (with N = LENGTH*LENGTH): 0.14sec
+unsigned int x = 0;
+    int n = strlen(word);
+    int a = toupper(word[0]) - 'A';
+    for (int i = 0; i < n; i++)
+    {
+        if (isalpha(word[i]))
+        {
+            x += toupper(word[i]) - 'A';
+        }
+    }
+    return (x * n * a) % N;
+
+Running time on lalaland (with N = 26*26): 0.18sec
+unsigned int x = 0;
+    int n = strlen(word);
+    int a = toupper(word[0]) - 'A';
+    for (int i = 0; i < n; i++)
+    {
+        if (isalpha(word[i]))
+        {
+            x += toupper(word[i]) - 'A';
+        }
+    }
+    return (x * n * a) % N;
+
+Running time on lalaland (with N = 26*LENGTH): 0.23sec
+unsigned int x = 0;
+    int n = strlen(word);
+    int a = toupper(word[0]) - 'A';
+    for (int i = 0; i < n; i++)
+    {
+        if (isalpha(word[i]))
+        {
+            x += toupper(word[i]) - 'A';
+        }
+    }
+    return (x * n * a) % N;
+
+Running time on lalaland (with N = 26*LENGTH): 0.08sec
+unsigned int x = 0;
+    unsigned int n = strlen(word);
+    for (int i = 0; i < n; i++)
+    {
+        if (isalpha(word[i]))
+        {
+            x += toupper(word[i]) - 'A';
+        }
+    }
+    return (x * n) % N;
+
+Running time on lalaland (with N = 26*LENGTH): 0.13sec
+unsigned int index = 0;
+    for (int i = 0, n = strlen(word); i < n; i++)
+    {
+        if (isalpha(word[i]))
+        {
+            index += toupper(word[i]) - 'A';
+        }
+    }
+    return index;
+
+Running time on lalaland (with N = LENGTH): 0.52sec
+unsigned int index = 0;
+    for (int i = 0, n = strlen(word); i < n; i++)
+    {
+        index += toupper(word[i]) - 'A';
+    }
+    return index % N;
+
+Running time on lalaland (with N = 26): 0.85sec
+unsigned int index = (toupper(word[0]) - 'A') * strlen(word);
+    return index % N;
+
+Running time on lalaland (with N = LENGTH): 0.51sec
+int n = strlen(word);
+    int a = toupper(word[0]) - 'A';
+    if (isalpha(word[1]))
+    {
+        int b = toupper(word[1]) - 'A';
+        return (((a * 26) + b) * n) % N;
+    }
+    else
+    {
+        return (a * 26 * n) % N;
+    }
+
+Running time on lalaland (with N = 26*26): 0.09sec
+int n = strlen(word);
+    int a = toupper(word[0]) - 'A';
+    if (isalpha(word[1]))
+    {
+        int b = toupper(word[1]) - 'A';
+        return (((a * 26) + b) * n) % N;
+    }
+    else
+    {
+        return (a * 26 * n) % N;
+    }
+
+Running time on lalaland (with N = 26*26): 0.13sec
+int a = toupper(word[0]) - 'A';
+    if (isalpha(word[1]))
+    {
+        int b = toupper(word[1]) - 'A';
+        return (a * 26) + b;
+    }
+    else
+    {
+        return a * 26;
+    }
+
+Running time on lalaland (with N = 26*26): 0.44sec
+unsigned int a = toupper(word[0]) - 'A';
+    if (isalpha(word[1]))
+    {
+        unsigned int b = toupper(word[1]) - 'A';
+        return a * b;
+    }
+    else
+    {
+        return a * 26;
+    }
+
+Running time on lalaland (with N = LENGTH): 0.65sec
+unsigned int index = (toupper(word[0]) - 'A') * strlen(word);
+return index % N;
+
+Running time on lalaland (with N = LENGTH): 0.74sec
+return strlen(word);
+
+Running time on lalaland (with N = 26): 0.44sec
+return toupper(word[0]) - 'A';
+*/

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                const multiButtons = document.querySelectorAll('.multi');
+                const responseInput = document.getElementById('response');
+                const checkResponse = document.getElementById('check');
+                const result1 = document.getElementById('result1');
+                const result2 = document.getElementById('result2');
+
+                multiButtons.forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        if (button.id == 'choice2') {
+                            button.style.backgroundColor = 'green';
+                            button.style.color = 'white';
+                            result1.textContent = 'Correct!';
+                        } else {
+                            button.style.backgroundColor = 'red';
+                            button.style.color = 'white';
+                            result1.textContent = 'Incorrect';
+                        }
+                    });
+                });
+
+                checkResponse.addEventListener('click', function() {
+                    const userResponse = responseInput.value.toLowerCase();
+                    if (userResponse == 'ethereum') {
+                        responseInput.style.backgroundColor = 'green';
+                        responseInput.style.color = 'white';
+                        result2.textContent = 'Correct!';
+                    } else {
+                        responseInput.style.backgroundColor = 'red';
+                        responseInput.style.color = 'white';
+                        result2.textContent = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>How many bitcoins are there in circulation?</h3>
+                <button class="multi" id="choice1">19,000</button>
+                <button class="multi" id="choice2">19,000,000</button>
+                <button class="multi" id="choice3">190,000</button>
+                <button class="multi" id="choice4">1,900,000</button>
+                <p id="result1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the second most popular crypto-currency?</h3>
+                <input autocomplete="off" id="response" type="text">
+                <button id="check">Check Answer</button>
+                <p id="result2"></p>
+            </div>
+        </div>
+    </body>
+</html>

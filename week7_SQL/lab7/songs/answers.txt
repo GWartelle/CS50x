@@ -1,0 +1,6 @@
+This listener had a pretty sad mood audio aura as his average valence is only 0.484443.
+But on the other hand, his audio aura was energetic and danceable as his average energy was 0.65906 and his average danceability was 0.71646.
+
+This might not be well representativ because those numbers are average across the whole year.
+Also some songs might be over-represented because the listener played those songs a lot in a short period of time.
+To be more representative would be to estimate those averages and their evolution across time.
