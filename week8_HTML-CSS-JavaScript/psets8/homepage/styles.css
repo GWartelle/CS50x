@@ -1,3 +1,45 @@
-body {
+img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+
+.paragraph {
+    padding: 10px;
+}
+
+
+.button {
+    margin: 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.color {
+    background-color: #fbf;
+}
+
+.button:hover {
+    opacity: 50%;
 }

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Quote
+{% endblock %}
+
+{% block main %}
+    <h2 class="mb-3">Stock Quote</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ quote.symbol }}</td>
+                <td>{{ quote.price | usd }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

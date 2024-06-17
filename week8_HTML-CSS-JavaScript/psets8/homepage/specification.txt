@@ -1,0 +1,9 @@
+I used the following HTML tags : link, script, header, nav, div, a, button, ul, li, main, h1, h2, h3, h4, img, main and footer.
+
+I stylized these elements : img, .background, .page, .paragraph, .button and .color.
+
+And I changed this properties : display, flex-direction, align-items, text-align, max-width, background-color, border-radius, padding, height, justify-content, border, margin.
+
+I used JavaScript to change dynamically and randomly the background color of the current page and the button on which the user must click on to change the color.
+
+I used bootstrap to create a nice looking navigation bar.

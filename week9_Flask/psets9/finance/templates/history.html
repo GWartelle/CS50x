@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h2 class="mb-3">History</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Action</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Number of Shares</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                    <tr>
+                        <td>
+                            {% if transaction.buying %}
+                            Buying
+                            {% else %}
+                            Selling
+                            {% endif %}
+                        </td>
+                        <td>{{ transaction.stock_symbol }}</td>
+                        <td>{{ transaction.stock_price | usd }}</td>
+                        <td>{{ transaction.stock_shares }}</td>
+                        <td>{{ transaction.time }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
